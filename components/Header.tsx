@@ -2,9 +2,13 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
-type Props = {};
+import { Social } from "../typings";
 
-const Header = (props: Props) => {
+type Props = {
+  socials: Social[];
+};
+
+export default function Header({ socials }: Props) {
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
@@ -23,22 +27,15 @@ const Header = (props: Props) => {
           duration: 1.5,
         }}
       >
-        {/*Socail Icons*/}
-        <SocialIcon
-          url="https://github.com/n8zzle?tab=repositories"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.linkedin.com/in/igorscickalenko/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.instagram.com/4i4a_335/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        {/* Social Icons */}
+        {socials.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.url}
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        ))}
       </motion.div>
       <Link href="#contact">
         <motion.div
@@ -71,6 +68,4 @@ const Header = (props: Props) => {
       </Link>
     </header>
   );
-};
-
-export default Header;
+}
