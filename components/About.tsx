@@ -1,8 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-type Props = {};
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,7 +19,7 @@ function About({}: Props) {
       </h3>
 
       <motion.img
-        src="/me2.jpg"
+        src={urlFor(pageInfo.heroImage).url()}
         initial={{
           x: -200,
           opacity: 0,
@@ -35,12 +39,7 @@ function About({}: Props) {
           <span className="underline decoration-[#F7AB0A]">little</span>{" "}
           background
         </h4>
-        <p className="text-base ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto id
-          totam incidunt molestiae distinctio sint inventore veritatis illo odio
-          expedita possimus commodi, quae fugiat sequi maxime explicabo at quo
-          eos?
-        </p>
+        <p className="text-base ">{pageInfo.backgroundInformation}</p>
       </div>
     </motion.div>
   );

@@ -35,29 +35,28 @@ export default function Home({
         <title>Igors Portfolio</title>
       </Head>
 
-      {/*Header*/}
       <Header socials={socials} />
-      {/*TODO:Hero*/}
+
       <section id="hero" className="snap-start">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
-      {/*TODO:About*/}
+
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
-      {/*TODO:  Experience*/}
+
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
-      {/*TODO:Skills*/}
+
       <section id="skills" className="snap-start">
         <Skills />
       </section>
-      {/*TODO:Projects*/}
+
       <section id="projects" className="snap-start">
         <Projects />
       </section>
-      {/*TODO:Contact Me*/}
+
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
@@ -80,6 +79,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
     },
-    revalidate: 60,
+    revalidate: 10,
   };
 };
