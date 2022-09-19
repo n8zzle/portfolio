@@ -1,9 +1,12 @@
 import React from "react";
-import Skill from "./Skill";
+import OneSkill from "./OneSkill";
 import { motion } from "framer-motion";
-type Props = {};
+import { Skill as SkillType } from "../typings";
+type Props = {
+  skills: Skill[];
+};
 
-function Skills({}: Props) {
+function Skills({ skills }: Props) {
   return (
     <motion.div
       initial={{
@@ -26,22 +29,9 @@ function Skills({}: Props) {
       </h3>
 
       <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        {skills?.map((skill) => (
+          <OneSkill key={skill._id} skill={skill} />
+        ))}
       </div>
     </motion.div>
   );
