@@ -19,7 +19,7 @@ function About({ pageInfo }: Props) {
       </h3>
 
       <motion.img
-        src={urlFor(pageInfo.heroImage).url()}
+        src={urlFor(pageInfo.profilePic).url()}
         initial={{
           x: -200,
           opacity: 0,

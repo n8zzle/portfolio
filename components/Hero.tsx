@@ -29,7 +29,7 @@ function Hero({ pageInfo }: Props) {
 
       <div className="z-20">
         <Image
-          src={urlFor(pageInfo.profilePic).url()}
+          src={urlFor(pageInfo.heroImage).url()}
           width={128}
           height={128}
           className="relative rounded-full mx-auto object-cover"
