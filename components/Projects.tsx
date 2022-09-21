@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import Image from "next/image";
+import Link from "next/link";
 type Props = {
   projects: Project[];
 };
@@ -54,9 +55,16 @@ function Projects({ projects }: Props) {
                   height={30}
                 />
               ))}
-              <p className="text-lg text-center md:text-left">
-                {project.summary}
-              </p>
+              <div className="flex flex-col p-3 space-y-5">
+                <p className="text-lg text-center md:text-left">
+                  {project.summary}
+                </p>
+                <Link href={project.linkToBuild}>
+                  <button className="bg-[#F7AB0A] py-3 rounded-lg text-black font-bold text-lg">
+                    Link
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
