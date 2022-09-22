@@ -26,7 +26,7 @@ export default function OneSkill({ skill, directionLeft }: Props) {
           className="rounded-full border border-gray-500 object-cover w-28 h-28  filter group-hover:grayscale transition duration-300 ease-in-out"
         />
       </motion.div>
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-32 w-32  rounded-full z-0">
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-16 w-16 md:h-32 md:w-32 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
           <p className="text-3xl font-bold text-black opacity-100 ">
             {skill.progress}%
