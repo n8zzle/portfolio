@@ -1,7 +1,7 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
-
+import { motion } from "framer-motion";
 type Inputs = {
   name: string;
   email: string;
@@ -16,7 +16,12 @@ function ContactMe({}: Props) {
     window.location.href = `mailto:cickalenkowork@outlook.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}.${formData.message} (${formData.email})`;
   };
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+    >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact Me
       </h3>
@@ -76,7 +81,7 @@ function ContactMe({}: Props) {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
