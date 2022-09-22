@@ -25,7 +25,7 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full mt-10 md:mt-16 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, i) => (
           <div
             key={project._id}
@@ -40,7 +40,7 @@ function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src={urlFor(project.image).url()}
-              className="sm:h-auto sm:w-3/3 sm:mt-7 md:h-2/3 md:w-3/3 rounded-lg"
+              className="sm:h-auto sm:w-3/3  md:h-2/3 md:w-3/3 rounded-lg"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
@@ -58,12 +58,12 @@ function Projects({ projects }: Props) {
                   />
                 ))}
               </div>
-              <div className="flex flex-col p-3 space-y-5">
+              <div className="flex flex-col p-3 space-y-5 md:w-[700px]">
                 <p className="text-lg text-center md:text-left">
                   {project.summary}
                 </p>
                 <Link href={project.linkToBuild}>
-                  <button className="bg-[#F7AB0A] py-3 rounded-lg text-black font-bold text-lg">
+                  <button className="bg-[#F7AB0A] py-3  rounded-lg text-black font-bold text-lg">
                     Link
                   </button>
                 </Link>
