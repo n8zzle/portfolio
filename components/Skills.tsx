@@ -1,7 +1,7 @@
 import React from "react";
 import OneSkill from "./OneSkill";
 import { motion } from "framer-motion";
-import { Skill as SkillType } from "../typings";
+import { Skill } from "../typings";
 type Props = {
   skills: Skill[];
 };
