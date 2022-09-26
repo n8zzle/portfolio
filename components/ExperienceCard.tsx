@@ -30,6 +30,7 @@ function ExperienceCard({ experience }: Props) {
           src={urlFor(experience.companyImage).url()}
           width={128}
           height={128}
+          alt={"Company"}
           className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-center"
         />
       </motion.div>
@@ -45,6 +46,7 @@ function ExperienceCard({ experience }: Props) {
               className="rounded-full object-cover"
               width={30}
               height={30}
+              alt={"Technologie"}
             />
           ))}
         </div>

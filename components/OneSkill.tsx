@@ -23,6 +23,7 @@ export default function OneSkill({ skill, directionLeft }: Props) {
           src={urlFor(skill?.image).url()}
           width={128}
           height={128}
+          alt={"Skill"}
           className="rounded-full border border-gray-500 object-cover w-28 h-28  filter group-hover:grayscale transition duration-300 ease-in-out"
         />
       </motion.div>

@@ -41,6 +41,7 @@ function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src={urlFor(project.image).url()}
+              alt={"Project"}
               className="sm:h-auto sm:w-3/3  md:h-2/3 md:w-3/3 rounded-lg"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">

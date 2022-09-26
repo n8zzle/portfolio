@@ -32,6 +32,7 @@ function Hero({ pageInfo }: Props) {
           src={urlFor(pageInfo.heroImage).url()}
           width={128}
           height={128}
+          alt={"PortfolioImage"}
           className="relative rounded-full mx-auto object-cover"
         />
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
