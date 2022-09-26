@@ -26,13 +26,13 @@ function ContactMe({}: Props) {
         Contact Me
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="mt-40 flex flex-col space-y-2 md:space-y-10">
+        <h4 className="text-xl md:text-4xl font-semibold text-center">
           I have got just what you need{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets talk</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-2 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p>017632704135</p>
@@ -49,9 +49,9 @@ function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 w-screen md:w-fit mx-auto p-5 "
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0">
             <input
               {...register("name")}
               placeholder="Name"
@@ -76,7 +76,7 @@ function ContactMe({}: Props) {
             placeholder="Message"
             className="contactInput"
           ></textarea>
-          <button className="bg-[#F7AB0A] py-5 px-10 rounded-sm text-black font-bold text-lg">
+          <button className="bg-[#F7AB0A] py-3 px-5 md:py-5 md:px-10 rounded-sm text-black font-bold text-md md:text-lg">
             Submit
           </button>
         </form>

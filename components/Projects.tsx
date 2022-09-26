@@ -30,26 +30,31 @@ function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-1 md:space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
             <motion.img
               initial={{
-                y: -300,
+                //  y: -300,
                 opacity: 0,
               }}
               transition={{ duration: 1.2 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{
+                opacity: 1,
+                // y: 0
+              }}
               viewport={{ once: true }}
               src={urlFor(project.image).url()}
               alt={"Project"}
-              className="sm:h-auto sm:w-3/3  md:h-2/3 md:w-3/3 rounded-lg"
+              className="h-auto w-3/3  md:h-2/3 md:w-3/3 rounded-lg mt-14"
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+            <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
+              <h4 className="text-2xl md:text-4xl font-semibold text-center">
                 {project.title}
               </h4>
               <div className="flex items-center">
-                <p className="text-lg font-bold">Technology Stack:</p>
+                <p className="text-md md:text-lg font-bold">
+                  Technology Stack:
+                </p>
                 {project.technologies.map((techlonogy) => (
                   <Image
                     key={techlonogy._id}
@@ -62,7 +67,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
               <div className="flex flex-col p-3 space-y-5 md:w-[700px]">
-                <p className="text-lg text-center md:text-left">
+                <p className="text-sm md:text-lg text-center md:text-left">
                   {project.summary}
                 </p>
                 <Link href={project.linkToBuild}>
