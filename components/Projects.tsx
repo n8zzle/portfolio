@@ -55,6 +55,7 @@ function Projects({ projects }: Props) {
                     key={techlonogy._id}
                     src={urlFor(techlonogy.image).url()}
                     className="rounded-full object-cover"
+                    alt={"Technologie"}
                     width={30}
                     height={30}
                   />
