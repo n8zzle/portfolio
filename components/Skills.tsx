@@ -24,11 +24,11 @@ function Skills({ skills }: Props) {
         Skills
       </h3>
 
-      <h3 className="top-36 absolute uppercase tacking-[3px] text-gray-500 text-sm">
-        Hover ober a skill for currency profieciency
+      <h3 className="hidden md:inline-flex top-36 absolute uppercase tacking-[3px] text-gray-500 text-sm">
+        Hover over a skill for currency profieciency
       </h3>
 
-      <div className="mt-44 grid grid-cols-4 md:grid-cols-6 gap-2 md:gap-3">
+      <div className="mt-44 mb-16 grid grid-cols-4 md:grid-cols-6 gap-2 md:gap-3">
         {skills?.map((skill) => (
           <OneSkill key={skill._id} skill={skill} />
         ))}
