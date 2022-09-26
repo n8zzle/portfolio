@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Experience } from "../typings";
+import { Experience } from "../typings.d";
 import Image from "next/image";
 import { urlFor } from "../sanity";
 type Props = {
