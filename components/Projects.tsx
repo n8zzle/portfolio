@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from "../typings";
+import { Project } from "../typings.d";
 type Props = {
   projects: Project[];
 };

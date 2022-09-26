@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
-import { PageInfo } from "../typings";
+import { PageInfo } from "../typings.d";
 type Props = {
   pageInfo: PageInfo;
 };
