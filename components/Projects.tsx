@@ -22,11 +22,11 @@ function Projects({ projects }: Props) {
       }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
+      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
         Projects
       </h3>
 
-      <div className="relative w-full mt-7 md:mt-16 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full mt-0 md:mt-16 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, i) => (
           <div
             key={project._id}
@@ -45,7 +45,7 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               src={urlFor(project.image).url()}
               alt={"Project"}
-              className="h-auto w-screen  md:h-auto md:w-2/4 rounded-lg mt-14"
+              className="h-auto w-screen  md:h-auto md:w-2/5 rounded-lg mt-14"
             />
             <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-xl md:text-4xl font-semibold text-center">

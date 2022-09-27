@@ -27,12 +27,12 @@ export default function OneSkill({ skill, directionLeft }: Props) {
           width={128}
           height={128}
           alt={"Skill"}
-          className="rounded-full border border-gray-500 object-cover w-28 h-28  filter group-hover:grayscale transition duration-300 ease-in-out"
+          className="rounded-full border border-gray-500 object-cover filter group-hover:grayscale transition duration-300 ease-in-out"
         />
       </motion.div>
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-full w-full  md:h-32 md:w-32 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black opacity-100 ">
+          <p className="text-xl md:text-3xl font-bold text-black opacity-100 ">
             {skill.progress}%
           </p>
         </div>

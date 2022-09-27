@@ -9,7 +9,7 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-0 flex-shrink-0 w-screen snap-center bg-[#292929] p-10 hover:opacity-100 md:opacity-40 md:cursor-pointer md:transition-opacity md:duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center -mt-5 md:mt-0 space-y-0 flex-shrink-0 w-screen snap-center bg-[#292929] p-5 md:p-10 hover:opacity-100 md:opacity-40 md:cursor-pointer md:transition-opacity md:duration-200 overflow-hidden">
       <motion.div
         initial={{
           y: -100,
@@ -62,7 +62,7 @@ function ExperienceCard({ experience }: Props) {
           : new Date(experience.dateEnded).toDateString()}
       </p>
 
-      <ul className="list-disc space-y-1 md:space-y-4 ml-5 text-sm md:text-lg max-h-96 overflow-y-scroll pr-5 scrollbar-thin crollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
+      <ul className="list-disc space-y-0 md:space-y-4 ml-5 text-sm md:text-lg max-h-96 overflow-y-scroll pr-5 scrollbar-thin crollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
         {experience.points.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
