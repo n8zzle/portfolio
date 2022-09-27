@@ -26,13 +26,13 @@ function ContactMe({}: Props) {
         Contact Me
       </h3>
 
-      <div className="mt-32 flex flex-col space-y-2 md:space-y-10">
-        <h4 className="text-lg md:text-4xl font-semibold text-center">
+      <div className="mt-24 flex flex-col space-y-2 md:space-y-10">
+        <h4 className="text-md md:text-4xl font-semibold text-center">
           I have got just what you need{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets talk</span>
         </h4>
 
-        <div className="space-y-2 md:space-y-10">
+        <div className="space-y-1 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-sm md:text-lg">017632704135</p>
@@ -49,7 +49,7 @@ function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-screen md:w-fit mx-auto p-5 "
+          className="flex flex-col space-y-2 w-screen md:w-fit mx-auto p-3 "
         >
           <div className="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0">
             <input
