@@ -27,7 +27,7 @@ function ContactMe({}: Props) {
       </h3>
 
       <div className="mt-32 flex flex-col space-y-2 md:space-y-10">
-        <h4 className="text-xl md:text-4xl font-semibold text-center">
+        <h4 className="text-lg md:text-4xl font-semibold text-center">
           I have got just what you need{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets talk</span>
         </h4>
@@ -35,15 +35,15 @@ function ContactMe({}: Props) {
         <div className="space-y-2 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p>017632704135</p>
+            <p className="text-sm md:text-lg">017632704135</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p>Berlin, 13589 Elmweg</p>
+            <p className="text-sm md:text-lg">Berlin, 13589 Elmweg</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p>cickalenkowork@outlook.com</p>
+            <p className="text-sm md:text-lg">cickalenkowork@outlook.com</p>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ function ContactMe({}: Props) {
             placeholder="Message"
             className="contactInput"
           ></textarea>
-          <button className="bg-[#F7AB0A] py-3 px-5 md:py-5 md:px-10 rounded-sm text-black font-bold text-md md:text-lg">
+          <button className="bg-[#F7AB0A] py-3 px-5 md:py-5 md:px-10 rounded-sm text-black font-bold text-sm md:text-lg">
             Submit
           </button>
         </form>

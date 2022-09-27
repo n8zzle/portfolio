@@ -48,11 +48,11 @@ function Projects({ projects }: Props) {
               className="h-auto w-screen  md:h-2/3 md:w-3/3 rounded-lg mt-14"
             />
             <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-2xl md:text-4xl font-semibold text-center">
+              <h4 className="text-xl md:text-4xl font-semibold text-center">
                 {project.title}
               </h4>
               <div className="flex items-center">
-                <p className="text-md md:text-lg font-bold">
+                <p className="text-sm md:text-lg font-bold">
                   Technology Stack:
                 </p>
                 {project.technologies.map((techlonogy) => (
@@ -67,11 +67,11 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
               <div className="flex flex-col p-3 space-y-5 md:w-[700px]">
-                <p className="text-sm md:text-lg text-center md:text-left">
+                <p className="text-xs md:text-lg text-center md:text-left">
                   {project.summary}
                 </p>
                 <Link href={project.linkToBuild}>
-                  <button className="bg-[#F7AB0A] py-3  rounded-lg text-black font-bold text-lg">
+                  <button className="bg-[#F7AB0A] py-3  rounded-lg text-black font-bold text-sm md:text-lg">
                     Link
                   </button>
                 </Link>

@@ -35,10 +35,10 @@ function ExperienceCard({ experience }: Props) {
         />
       </motion.div>
       <div className="px-0 md:px-10 ">
-        <h4 className="text-xl md:text-4xl font-light">
+        <h4 className="text-lg md:text-4xl font-light">
           {experience.jobTitle}
         </h4>
-        <p className="font-bold text-xl md:text-2xl mt-1">
+        <p className="font-bold text-lg md:text-2xl mt-1">
           {experience.company}
         </p>
         <div className="flex space-x-1 my-2">
@@ -55,14 +55,14 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
       </div>
-      <p className="uppercase py-2 md:py-5 text-gray-300 ">
+      <p className="uppercase text-sm md:text-light py-2 md:py-5 text-gray-300 ">
         {new Date(experience.dateStarted).toDateString()} -{" "}
         {experience.isCurrentlyWorkingHere
           ? "Present"
           : new Date(experience.dateEnded).toDateString()}
       </p>
 
-      <ul className="list-disc space-y-1 md:space-y-4 ml-5 text-md md:text-lg max-h-96 overflow-y-scroll pr-5 scrollbar-thin crollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
+      <ul className="list-disc space-y-1 md:space-y-4 ml-5 text-sm md:text-lg max-h-96 overflow-y-scroll pr-5 scrollbar-thin crollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
         {experience.points.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
