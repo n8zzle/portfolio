@@ -4,6 +4,7 @@ import { urlFor } from "../sanity";
 import Image from "next/image";
 import Link from "next/link";
 import { Project } from "../typings.d";
+import { SocialIcon } from "react-social-icons";
 type Props = {
   projects: Project[];
 };
@@ -71,13 +72,18 @@ function Projects({ projects }: Props) {
                   {project.summary}
                 </p>
                 <Link href={project.linkToBuild}>
-                  <button className="bg-[#F7AB0A] py-3  rounded-lg text-black font-bold text-sm md:text-lg">
+                  <button className="bg-[#F7AB0A] py-1   rounded-lg text-black font-bold text-sm md:text-lg">
+                    <SocialIcon
+                      url={project.linkToBuild}
+                      fgColor="black"
+                      bgColor="transparent"
+                    />
                     Link
                   </button>
                 </Link>
               </div>
             </div>
-            <p className="text-center">
+            <p className="text-center font-extrabold">
               {i + 1} of {projects.length}
             </p>
           </div>
