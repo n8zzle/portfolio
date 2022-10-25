@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import { Experience } from "../typings.d";
+
 type Props = {
   experiences: Experience[];
 };
@@ -19,14 +20,16 @@ function Experience({ experiences }: Props) {
       </h3>
 
       <div className="w-screen  mt-24 mb-10 flex space-x-5  overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-grey-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {experiences?.map((experience, i) => (
-          <div key={experience._id}>
-            <ExperienceCard experience={experience} />
-            <p className="text-center">
-              {i + 1} of {experiences.length}
-            </p>
-          </div>
-        ))}
+        {experiences?.map((experience, i) => {
+          return (
+            <div key={experience._id}>
+              <ExperienceCard experience={experience} />
+              <p className="text-center font-bold">
+                {i + 1} of {experiences.length}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </motion.div>
   );
