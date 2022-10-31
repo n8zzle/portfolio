@@ -48,7 +48,7 @@ function Projects({ projects }: Props) {
               alt={"Project"}
               className="h-auto w-screen  md:h-auto md:w-2/5 rounded-lg mt-14"
             />
-            <div className="space-y-3 md:space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-3 md:space-y-5 px-0 md:px-10 max-w-6xl">
               <h4 className="text-xl md:text-4xl font-semibold text-center">
                 {project.title}
               </h4>
